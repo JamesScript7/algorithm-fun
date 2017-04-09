@@ -1,15 +1,14 @@
+'use strict';
+
 function convertToRoman(num) {
-  let numArr = [];
-  numArr.push(num);
+  result = "";
+  let numStr = num.toString();
 
-  console.log(numArr);
-  numArr.split("");
+  for (let i = 0; i < numStr.length; i++) {
+    console.log(i);
+  }
 
-  // for (let i = 0; i < num.length; i++) {
-  //   console.log(num.indexOf(i));
-  //   console.log(numArr);
-  // }
-  return numArr;
+  return result;
 }
 
 convertToRoman(36);
