@@ -2,20 +2,14 @@
 
 function convertToRoman(num) {
   let
-    numStr = num.toString(),
-    arr = [],
-    res = "",
-    result,
+    arr = num.toString().split("").reverse(),
     romanNum = {
       one: "I",
       five: "V",
       ten: "X",
       fifty: "L"
-    };
-
-  for (var i = 0; i < numStr.length; i++) {
-    arr.unshift(numStr[i]);
-  }
+    },
+    res = "";
 
   if (arr[0]) {
     for (let j = 0; j < arr[0]; j++) {
@@ -35,8 +29,8 @@ function convertToRoman(num) {
     res = "";
   }
 
-  console.log(arr.reverse);
-  return result;
+  console.log(arr);
+  // return res;
 }
 
 convertToRoman(36);
