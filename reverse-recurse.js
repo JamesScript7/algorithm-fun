@@ -1,4 +1,5 @@
 // Example One
+'use strict';
 
 var str = "doggo";
 
