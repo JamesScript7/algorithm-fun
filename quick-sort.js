@@ -20,27 +20,14 @@
       }
     }
 
+    left = QuickSort(left);
+    right = QuickSort(right);
 
+    return left.concat(pivot, right);
 
+  };
 
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  var myArray = [5,3,1,6,8,9,2,4,7];
+  QuickSort(myArray);
 
 })
