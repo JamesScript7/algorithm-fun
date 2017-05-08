@@ -22,41 +22,44 @@ function convertToRoman(num) {
 
   // 2. Using modulo could help?
 
-  console.log(0 % 5);
+  // 3. Possibly switch case?
+
+  // 4. How do I avoid conditionals?
+
+  console.log(0 % 5); // 0
   console.log(1 % 5);
   console.log(2 % 5);
   console.log(3 % 5);
-  console.log(4 % 5);
-  console.log(5 % 5);
-  console.log(6 % 5);
+  console.log(4 % 5); // 4
+  console.log(5 % 5); // 0
+  console.log(6 % 5); // 1
   console.log(7 % 5);
   console.log(8 % 5);
-  console.log(9 % 5);
-  console.log(10 % 5);
+  console.log(9 % 5); // 4
+  console.log(10 % 5); // 0
 
   function handler(array) {
     // ones
     for (let j = 0; j < array[0]; j++) {
-      if (array[0] < 5) {
+      if (array[0] > 0 && array[0] < 5) {
 
         // maybe this can be a universal function!
         if (array[0] % 5 === 4) {
           res = romanNum.one + romanNum.five;
-        } else if (array[0] % 5 === 0) {
+        }
+        if (array[0] % 5 === 0) {
           res = romanNum.five;
         }
 
       } else if (array[0] > 5) {
         res = romanNum.five;
-        res += romanNum.one;
       }
-
+      res += romanNum.one;
 
     }
 
     romanArr[0] = res;
     res = "";
-
   }
 
   handler(arr);
