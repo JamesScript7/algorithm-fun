@@ -1,10 +1,10 @@
-// Colleen is turning  years old! She has
+// Colleen is turning x years old! She has
 // candles of various heights on her cake,
-// and candle  has height . Because the taller
+// and candle x has height x. Because the taller
 // candles tower over the shorter ones, Colleen
 // can only blow out the tallest candles.
 //
-// Given the  for each individual candle,
+// Given the x for each individual candle,
 // find and print the number of candles she
 // can successfully blow out.
 //
@@ -20,3 +20,30 @@
 // 1 2 3 2 3
 //
 // answer: 2
+
+var arr = [1,3,2,3];
+var n = arr.length;
+var maxNum = 0;
+var maxArr = [];
+
+// var sortedArr = arr.sort((a,b) => a - b);
+// console.log(sortedArr);
+
+for (var i = 0; i < n; i++) {
+  if (arr[i] > maxNum) {
+    maxNum = arr[i];
+  }
+}
+
+maxArr.push(maxNum);
+
+for (var j = 0; j < n; j++) {
+  if (arr[j] === maxNum) {
+    maxNum++;
+  }
+}
+
+
+console.log(maxNum);
+console.log(maxArr);
+
