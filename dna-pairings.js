@@ -1,16 +1,21 @@
-/* pairings:
+'use strict';
+
+/* DNA Pairings:
+ *
  *  A - T
  *  T - A
  *  C - G
  *  G - C
+ *
  *  pairElement("GCG"); should return:
  *  [["G","C"], ["C","G"], ["G","C"]]
+ *
  */
 
 function pairElement(str) {
-  let arr = str.split('');
-  let paired = [];
-  let letter = '';
+  let arr    = str.split(''),
+      paired = [],
+      letter = '';
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === 'G' || arr[i] === 'C') {

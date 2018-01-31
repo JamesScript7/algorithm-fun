@@ -1,7 +1,9 @@
+'use strict';
+
 function main(input) {
-  var a = input[0].split("");
-  var b = input[1].split("");
-  var obj = {};
+  const a = input[0].split('');
+  const b = input[1].split('');
+	let obj = {};
 
   for (var i = 0; i < a.length; i++) {
     for (var j = 0; j < b.length; j++) {
@@ -16,12 +18,13 @@ function main(input) {
     }
   }
 
-  var keys = Object.keys(obj);
+  const keys = Object.keys(obj);
 
-  var lenA = a.length - keys.length;
-  var lenB = b.length - keys.length;
+  let lenA = a.length - keys.length;
+  let lenB = b.length - keys.length;
 
   console.log(lenA + lenB);
+	return lenA + lenB;
 }
 
 
