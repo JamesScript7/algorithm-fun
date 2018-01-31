@@ -1,16 +1,17 @@
+'use strict';
 
 function translatePigLatin(str) {
-  word = str.toLowerCase();
-  var firstChar = word[0];
-  var vowels = ['a','e','i','o','u'];
-  var firstPart = [];
+  let word = str.toLowerCase();
+  let firstChar = word[0];
+  let vowels = ['a','e','i','o','u'];
+  let firstPart = [];
   // I can get rid of secondPart array
-  var secondPart = [];
-  var res = [];
+  let secondPart = [];
+  let res = [];
   
-  for(var i = 0; i < word.length; i++) {
+  for(let i = 0; i < word.length; i++) {
 
-    for(var j = 0; j < vowels.length; j++) {
+    for(let j = 0; j < vowels.length; j++) {
       if (word[0] === vowels[j]) {
         res.push(word);
         res.push('way');
@@ -36,4 +37,4 @@ function translatePigLatin(str) {
   return combined.join('');
 }
 
-translatePigLatin("glove");
+translatePigLatin('glove');
