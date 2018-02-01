@@ -1,7 +1,13 @@
-console.time("time");
+'use strict';
 
-var QuickSort = function(inputArr) {
-  var
+/* Quick Sort.
+ *
+ * Is it really quick sort...?
+ *
+ * */
+
+var quickSort = function(inputArr) {
+  let
     len = inputArr.length,
     left = [],
     right = [],
@@ -13,7 +19,7 @@ var QuickSort = function(inputArr) {
 
   pivot = inputArr[0];
 
-  for (var i = 1; i < len; i++) {
+  for (let i = 1; i < len; i++) {
     if (inputArr[i] <= pivot) {
       left.push(inputArr[i]);
     } else {
@@ -21,14 +27,13 @@ var QuickSort = function(inputArr) {
     }
   }
 
-  left = QuickSort(left);
-  right = QuickSort(right);
+  left = quickSort(left);
+  right = quickSort(right);
 
+	console.log(left.concat(pivot, right));
   return left.concat(pivot, right);
-
 };
 
-var myArray = [5,3,1,6,8,9,2,4,7];
+const myArray = [5,3,1,6,8,9,2,4,7];
 
-QuickSort(myArray);
-console.timeEnd("time");
+quickSort(myArray);
