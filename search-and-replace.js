@@ -1,7 +1,18 @@
-function myReplace(str, before, after) {
-  var newStr = str.split(" ");
+'use strict';
 
-  for (var i = 0; i < newStr.length; i++) {
+/* Bonfire Problem: Search.
+ *
+ * First argument is the sentence to perform the search and replace on.
+ * Second argument is the word that you will be replacing (before).
+ * Third arguement is what you will be replacing the second argument
+ * with (after).
+ *
+ * */
+
+function myReplace(str, before, after) {
+  let newStr = str.split(" ");
+
+  for (let i = 0; i < newStr.length; i++) {
     if (newStr[i] === before) {
       if (before[0] == before[0].toUpperCase()) {
         newStr[i] = after.charAt(0).toUpperCase() + after.slice(1);

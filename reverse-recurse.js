@@ -1,22 +1,19 @@
-// Example One
 'use strict';
 
-var str = "doggo";
+const str = 'doggo';
 
-//using recursive:
+function recurse(x,arr) {
+	let len    = x.length,
+	    result = arr;
 
-let x = str.length;
-
-var result = [];
-
-function recurse(x) {
-  console.log(result);
-  if (x <= 0) {
-    return result;
+  if (len <= 0) {
+    console.log(result.join(''));
+		return result.join('');
   } else {
-    result.push(str[x - 1]);
-    return x - ( recurse(x - 1) );
+    result.push(x[len - 1]);
+		x = x.split('').splice(0, (len - 1)).join('');
+    return recurse(x, result);
   }
 }
 
-recurse(x);
+recurse(str, []);
