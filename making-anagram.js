@@ -23,7 +23,7 @@ function main(input) {
   let lenA = a.length - keys.length;
   let lenB = b.length - keys.length;
 
-  console.log(lenA + lenB);
+	console.log(lenA + lenB);
 	return lenA + lenB;
 }
 

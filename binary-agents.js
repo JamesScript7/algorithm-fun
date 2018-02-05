@@ -15,11 +15,10 @@ function binaryAgent(str) {
 
   // TIP: This is how to turn a character into binary!
   // console.log("q".charCodeAt(0).toString(2));
-
+	
 	decrypted = res.join('');
-
 	console.log(decrypted);
-  return decrypted;
+	return decrypted;
 }
 
 binaryAgent(binary);

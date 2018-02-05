@@ -20,7 +20,7 @@ function largestCandleFinder(a) {
 
   for (let i = 0; i < n; i++) {
     if (arr[i] > maxNum) {
-      maxNum = arr[i];
+			maxNum = arr[i];
 			maxArr = [];
 			maxArr.push(maxNum);
     } else if (arr[i] === maxNum) {

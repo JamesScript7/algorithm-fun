@@ -31,7 +31,7 @@ var quickSort = function(inputArr) {
   right = quickSort(right);
 
 	console.log(left.concat(pivot, right));
-  return left.concat(pivot, right);
+	return left.concat(pivot, right);
 };
 
 const myArray = [5,3,1,6,8,9,2,4,7];

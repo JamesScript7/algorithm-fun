@@ -9,9 +9,9 @@ function translatePigLatin(str) {
   let secondPart = [];
   let res = [];
   
-  for(let i = 0; i < word.length; i++) {
+  for (let i = 0; i < word.length; i++) {
 
-    for(let j = 0; j < vowels.length; j++) {
+    for (let j = 0; j < vowels.length; j++) {
       if (word[0] === vowels[j]) {
         res.push(word);
         res.push('way');
@@ -25,7 +25,7 @@ function translatePigLatin(str) {
       }
     }
     
-    if(typeof word[i] !== 'undefined') {
+    if (typeof word[i] !== 'undefined') {
       firstPart.push(word[i]);
     }
   
