@@ -17,7 +17,7 @@ function spinalCase(str) {
 
   // This can definitely be rewritten.
 	let prep = str.split(/(?<=[a-z])(?=[A-Z])|\s|-|_/g);
-  let split = prep.map( el => el.toLowerCase() );
+	let split = prep.map( el => el.toLowerCase() );
 	let result = split.join(' ').replace(/(?<=[a-z])(?=[A-Z])|\s|-|_/g, joiner);
 
 	console.log(result);
