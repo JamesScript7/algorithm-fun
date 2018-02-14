@@ -5,7 +5,7 @@
 const binary = '01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111';
 
 function binaryAgent(str) {
-  const binArr  = str.split(" "),
+  const binArr  = str.split(' '),
         res     = [];
 	let decrypted = '';
 
@@ -15,7 +15,7 @@ function binaryAgent(str) {
 
   // TIP: This is how to turn a character into binary!
   // console.log("q".charCodeAt(0).toString(2));
-	
+
 	decrypted = res.join('');
 	console.log(decrypted);
 	return decrypted;

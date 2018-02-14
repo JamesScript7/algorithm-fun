@@ -10,7 +10,7 @@
  * */
 
 function myReplace(str, before, after) {
-  let newStr = str.split(" ");
+  let newStr = str.split(' ');
 
   for (let i = 0; i < newStr.length; i++) {
     if (newStr[i] === before) {
@@ -22,9 +22,9 @@ function myReplace(str, before, after) {
     }
   }
 
-  str = newStr.join(" ");
+  str = newStr.join(' ');
   console.log(str);
   return str;
 }
 
-myReplace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped");
+myReplace('A quick brown fox Jumped over the lazy dog', 'Jumped', 'leaped');

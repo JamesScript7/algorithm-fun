@@ -7,8 +7,8 @@
  *  C - G
  *  G - C
  *
- *  pairElement("GCG"); should return:
- *  [["G","C"], ["C","G"], ["G","C"]]
+ *  pairElement('GCG'); should return:
+ *  [['G','C'], ['C','G'], ['G','C']]
  *
  */
 
@@ -33,4 +33,4 @@ function pairElement(str) {
   return paired;
 }
 
-pairElement("GCG");
+pairElement('GCG');
