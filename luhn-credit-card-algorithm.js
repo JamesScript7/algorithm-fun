@@ -56,13 +56,13 @@ function validate(cardNumber) {
 	const card = cardChecker(cardNumber);
 	let cardtype = 'INVALID';
 
-	let start = Math.floor(cardNumber / Math.pow(10, card.length - 2));
-
-	if (/^4/.test(start)) {
-		start = Math.floor(start / 10);
-	}
-
 	if (card.valid) {
+		let start = Math.floor(cardNumber / Math.pow(10, card.length - 2));
+
+		if (/^4/.test(start)) {
+			start = Math.floor(start / 10);
+		}
+
 		if (start === 34 || start === 37 && card.length === 15) {
 			cardtype = 'AMEX';
 		} else if ((start >= 51 && start <= 55) && card.length === 16) {
