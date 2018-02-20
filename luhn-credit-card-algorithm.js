@@ -20,34 +20,60 @@
 // Card number must be acquired through a prompt.
 //const cardNumberPrompt = parseInt(prompt("Number: "));
 
-// Calculates checksum and returns a BOOLEAN.
-function isCardValid(cardNumber, sum = 0) {
+// Calculates checksum and RETURNS AN OBJECT.
+function cardChecker(cardNumber, sum = 0, length = 0) {
 
 	if (cardNumber <= 0) {
 		
-		console.log(`End: ${sum}`);
-		return sum ? sum % 10 === 0 : false;
-	
-	} else if (!isNaN(cardNumber)) {
-		let numProduct = Math.floor(((cardNumber / 10) % 10)) * 2;
+		return {
+			valid: sum ? sum % 10 === 0 : false,
+			length
+		}
 
-		sum += cardNumber % 10;
-		sum += Math.floor(numProduct / 10) + (numProduct % 10);
+	} else if (typeof cardNumber === 'number' && !isNaN(cardNumber)) {
 
-		return isCardValid(Math.floor(cardNumber / 100), sum);
+		let numberProduct = cardNumber % 10 * 2;
+
+		if (length % 2) {
+			sum += Math.floor(numberProduct / 10) + (numberProduct % 10);
+		} else {
+			sum += cardNumber % 10;
+		}
+
+		return cardChecker(Math.floor(cardNumber / 10), sum, length + 1);
 
 	} else {
+
 		return 0;
+
 	}
 }
 
-isCardValid(378282246310005);
+//isCardValid(378282246310005);
 
 // Returns card-type: AMEX, MASTERCARD, VISA, or INVALID.
 function validate(cardNumber) {
-	// Work on switch case
+	const card = cardChecker(cardNumber);
+	let cardtype = 'INVALID';
 
-	console.log(cardNumber);
+	let start = Math.floor(cardNumber / Math.pow(10, card.length - 2));
+
+	if (/^4/.test(start)) {
+		start = Math.floor(start / 10);
+	}
+
+	if (card.valid) {
+		if (start === 34 || start === 37 && card.length === 15) {
+			cardtype = 'AMEX';
+		} else if ((start >= 51 && start <= 55) && card.length === 16) {
+			cardtype = 'MASTERCARD';
+		} else if (start === 4 && (card.length === 13 || card.length === 16)) {
+			cardtype = 'VISA';
+		}
+	}
+
+	console.log(`Card-type: ${cardtype}`);
+	return `Card-type: ${cardtype}`;
 }
 
-//validate(378282246310005);
+validate(4485745162376822);
