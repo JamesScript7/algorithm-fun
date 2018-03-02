@@ -20,14 +20,14 @@ function bubbleSort(arr) {
 				return arr;
 			}
 
-			console.log(i);
+			// console.log(i);
 		}
 
-		//console.log(arr);
+		// console.log(arr);
 		n--;
 	}
 
-	console.log(arr);
+	// console.log(arr);
 	return arr;
 }
 
