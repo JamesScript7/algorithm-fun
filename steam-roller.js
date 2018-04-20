@@ -8,7 +8,7 @@
  * */
 
 function steamrollArray(arr) {
-  var store = [];
+  let store = [];
 
   function roller(x) {
     if (Array.isArray(x)) {
@@ -20,7 +20,7 @@ function steamrollArray(arr) {
     }
   }
 
-  arr.forEach(function(el) {
+  arr.forEach((el) => {
     roller(el);
   });
 
