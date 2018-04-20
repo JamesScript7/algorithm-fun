@@ -28,17 +28,29 @@ function convertToRoman(num) {
 
   // 4. How do I avoid conditionals?
 
-  console.log(0 % 5); // 0
-  console.log(1 % 5);
-  console.log(2 % 5);
-  console.log(3 % 5);
-  console.log(4 % 5); // 4
-  console.log(5 % 5); // 0
-  console.log(6 % 5); // 1
-  console.log(7 % 5);
-  console.log(8 % 5);
-  console.log(9 % 5); // 4
+  console.log(0 % 5);  // 0
+  console.log(1 % 5);  // 1
+  console.log(2 % 5);  // 2
+  console.log(3 % 5);  // 3
+  console.log(4 % 5);  // 4
+  console.log(5 % 5);  // 0
+  console.log(6 % 5);  // 1
+  console.log(7 % 5);  // 2
+  console.log(8 % 5);  // 3
+  console.log(9 % 5);  // 4
   console.log(10 % 5); // 0
+
+  console.log(5 % 0);  // NaN
+  console.log(5 % 1);  // 0
+  console.log(5 % 2);  // 1
+  console.log(5 % 3);  // 2
+  console.log(5 % 4);  // 1
+  console.log(5 % 5);  // 0
+  console.log(5 % 6);  // 5
+  console.log(5 % 7);  // 5
+  console.log(5 % 8);  // 5
+  console.log(5 % 9);  // 5
+  console.log(5 % 10); // 5
 
   function handler(array) {
     // ones
